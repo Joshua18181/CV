@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Joshua Adrián Aburto Beltrán</title>
-    <!-- DESAFÍO PLUS: Añadir favicon aquí -->
     <head>
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://Joshua18181.github.io/mi-cv/">
@@ -21,245 +20,291 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
 
-    <style>
+<style>
         body{
-            background-color: #f4f4f4;
+            background-color: #0d1117;
             font-family: Arial, Helvetica, sans-serif;
-            color: #333;
+            color: #A1A1AA;
             line-height: 1.6;
         }
         header h1{
-            color: #2c3e50;
             font-size: 2.5em;
             text-align: center;
             margin-bottom: 5px;
+            color: #38BDF8;
+            letter-spacing: 1px;
         }
         header p {
             text-align: center;
-            color: #7f8c8d;
+            color: #52525B;
             font-size: 1.2em;
             margin-bottom: 30px;
         }
         main{
             max-width: 800px;
             margin: 20px auto;
-            background: white;
+            background: #18181B;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
         }
         section{
             margin-bottom: 30px;
+            background: #0d1117;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #27272A;
         }
         h2{
-            color: #183a50;
+            color: #38BDF8;
             font-size: 1.8em;
-            border-bottom: 2px solid #183a50;
+            border-bottom: 1px solid #27272A;
             padding-bottom: 10px;
             margin-bottom: 15px;
+            position: relative;
+        }
+        /* línea de acento bajo el h2 */
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 48px;
+            height: 2px;
+            background: #38BDF8;
+            border-radius: 2px;
         }
         p{
             line-height: 1.8;
             margin-bottom: 15px;
+            color: #A1A1AA;
         }
         ul {
             list-style: none;
             padding-left: 0;
         }
-
         li {
             margin-bottom: 15px;
             padding-left: 20px;
-            border-left: 3px solid #183a50;
-        }     
+            border-left: 2px solid #38BDF8;
+            color: #A1A1AA;
+        }
         input, textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #27272A;
             border-radius: 5px;
             font-family: Arial, sans-serif;
-        }       
-
+            background: #09090B;
+            color: #E4E4E7;
+            box-sizing: border-box;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #3F3F46;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #38BDF8;
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+        }
         button {
-            background: #3498db;
-            color: white;
+            background: #38BDF8;
+            color: #09090B;
             padding: 12px 30px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            font-weight: 600;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        button:hover {
+            background: #7DD3FC;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
         }
         footer {
-            background: #2c3e50;
-            color: white;
+            background: #09090B;
+            color: #3F3F46;
             text-align: center;
             padding: 20px;
             margin-top: 30px;
             border-radius: 0 0 10px 10px;
-        }   
-
+            border-top: 1px solid #27272A;
+        }
         footer a {
-            color: #3498db;
+            color: #38BDF8;
             text-decoration: none;
         }
-        button:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-        }
-
         footer a:hover {
-            color: #5dade2;
+            color: #7DD3FC;
             text-decoration: underline;
         }
-.item {
-  background: #0a2a4a;        /* azul oscuro */
-  color: #ffffff;             /* texto blanco */
-  padding: 15px 20px;
-  margin: 10px 0;
-  width: 50%;
-  text-align: center;
-  border-radius: 8px;         /* esquinas redondeadas */
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.3s ease;  /* animación suave */
-}
 
-/* Efecto al pasar el mouse */
-.item:hover {
-  background: #133b63;        /* azul más claro al hover */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+        /* ── Contenedor principal ── */
+        .cv-container {
+            display: flex;
+            gap: 0;
+            max-width: 100%;
+            margin: 0 auto;
+            border: 1px solid #27272A;
+            border-radius: 12px;
+            overflow: hidden;
+            align-items: stretch;
+            box-sizing: border-box;
+        }
 
-.section{
-    background: #ffffff;        /* fondo blanco */
-  color: #0a2a4a;             /* texto azul oscuro */
-  padding: 15px 20px;
-  margin: 10px 0;
-  width: 50%;
-  text-align: center;
-  border-radius: 8px;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  border: 2px solid #0a2a4a;  /* borde azul oscuro */
-  transition: all 0.3s ease;
-}
-.section:hover{
-      background: #0a2a4a;        /* se invierte al pasar el mouse */
-  color: #ffffff;             /* texto blanco */
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        /* ── Sidebar ── */
+        .sidebar {
+            flex: 0 0 50%;
+            background: #0d1117;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            gap: 10px;
+            box-sizing: border-box;
+        }
 
-}
-.cv-container {
-    display: flex;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    border: solid #2c3e50;
-}
+        /* ── Contenido principal ── */
+        .main-content {
+            flex: 0 0 50%;
+            background: #18181B;
+            padding: 28px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            gap: 10px;
+            border-left: 1px solid #27272A;
+            box-sizing: border-box;
+        }
 
-.sidebar {
-    flex: 0 0 300px;  /* No crece, no encoge, 300px fijo */
-    background: #2c3e50;
-    padding: 30px;
-    color: white;
-}
+        /* ── Base compartida ── */
+        .item,
+        .section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: auto;
+            min-width: 0;
+            padding: 13px 18px;
+            margin: 0;
+            border-radius: 8px;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
 
-.main-content {
-    flex: 1;  /* Toma todo el espacio restante */
-    background: white;
-    padding: 30px;
-}
+        .item .nav-icon,
+        .section .nav-icon {
+            font-size: 18px;
+            width: 26px;
+            text-align: center;
+            flex-shrink: 0;
+        }
 
-/* Responsive: En móviles, cambiar a 1 columna */
-@media (max-width: 768px) {
-    .cv-container {
-        flex-direction: column;
-    }
-    
-    .sidebar {
-        flex: 1;  /* Ocupa todo el ancho */
-    }
-}
+        /* ── .item: sidebar ── */
+        .item {
+            background: #18181B;
+            color: #A1A1AA;
+            border: 1px solid #27272A;
+        }
+
+        .item:hover {
+            background: #38BDF8;
+            color: #09090B;
+            transform: translateX(4px);
+            box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
+            border-color: transparent;
+        }
+
+        .item:hover .nav-icon {
+            filter: brightness(0);
+        }
+
+        /* ── .section: main ── */
+        .section {
+            background: #0d1117;
+            color: #A1A1AA;
+            border: 1px solid #27272A;
+            border-left: 2px solid #38BDF8;
+        }
+
+        .section:hover {
+            background: #38BDF8;
+            color: #09090B;
+            transform: translateX(-4px);
+            box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
+            border-color: transparent;
+        }
+
+        .section:hover .nav-icon {
+            filter: brightness(0);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+            }
+            .sidebar,
+            .main-content {
+                flex: 1 1 auto;
+                border-left: none;
+            }
+            .main-content {
+                border-top: 1px solid #27272A;
+            }
+            .item:hover { transform: translateY(-3px); }
+            .section:hover { transform: translateY(-3px); }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ====================
-        HEADER: Tu nombre y título profesional
-        ==================== -->
     <header>
-        <!-- COMPLETAR: Tu nombre completo -->
         <h1 class="nombre">Joshua Adrián Aburto Beltrán</h1>
-
-        <!-- COMPLETAR: Tu título profesional o lo que estudias -->
         <p>Ingeniero de software - Desarrollador junior</p>
     </header>
 
-    <!-- ====================
-        MAIN: Contenido principal del CV
-        ==================== -->
     <main>
 
-        <!-- SECCIÓN: Sobre Mí -->
         <section id="sobre-mi">
             <h2>Sobre Mí</h2>
-
-            <!-- COMPLETAR: Breve descripción de ti (2-4 líneas) -->
             <p>
-                Soy estudiante apasionado por la tecnología, buscando oportunidades para crecer en el desarrollo web y por la 
-                industria tecnologica, me gusta el deporte y tambien me gusta aprender de todo. 
-            </p>
-
-            <!-- OPCIONAL: Segundo párrafo si necesitas más espacio -->
-            <p>
-                Mis metas son irme de intercambio y trabajar en una empresa de otro país, 
-                tambien me llama mucho la atencion viajar por el mundo
+                Soy estudiante de Ingeniería de Software con un fuerte enfoque en backend, analisis de datos e innovación tecnológica. 
+                Me distingo por mi capacidad de aprendizaje autónomo y una mentalidad orientada a objetivos. 
+                Busco mi primera oportunidad profesional para aplicar mis conocimientos técnicos y
+                contribuir al éxito de proyectos internacionales, con el fin de consolidar una carrera con proyección global.
             </p>
         </section>
 
-        <!-- SECCIÓN: Experiencia / Educación -->
         <section id="experiencia">
-            <h2>Experiencia y Educación</h2>
-
-            <!-- Usamos una lista desordenada para items -->
+            <h2>Educación</h2>
             <ul>
-                <!-- COMPLETAR: Item 1 -->
                 <li>
                     <strong>Ingeniería de software</strong> - 2028
-                    <br>
-                    Aprendi desarrollo web con JavaScript y Node, tambien aprendi de redes y MySQL
                 </li>
-
-                <!-- COMPLETAR: Item 2 -->
                 <li>
                     <strong>Ingles individual</strong> - 2024
                     <br>
                 </li>
-
-                <!-- COMPLETAR: Item 3 (opcional) -->
                 <li>
-                    <strong>Bachillerato 1</strong> - 2024
-                    <br>
+                    <strong></strong>
                 </li>
             </ul>
         </section>
 
-        <!-- SECCIÓN: Habilidades -->
         <section id="habilidades">
             <h2>Habilidades</h2>
-
-            <!-- COMPLETAR: Lista de habilidades -->
             <ul>
                 <li>JavaScript – Desarrollo de aplicaciones web y lógica del lado del cliente.</li>
                 <li>Python – Programación estructurada, automatización y manipulación de datos.</li>
@@ -271,35 +316,38 @@
                 <li>Capacidad de aprendizaje continuo</li>
             </ul>
         </section>
-        <section>
-            <h2>Layout Prueba</h2>
-                <div class="cv-container">
-                    <aside class="sidebar">
-                        <div class="item">Foto</div>
-                        <div class="item">Contacto</div>
-                        <div class="item">Habilidades</div>
-                    </aside>
-              
-                    <main class="main-content">
-                        <div class="section">Sobre Mí</div>
-                        <div class="section">Experiencia</div>
-                        <div class="section">Educación</div>
-                    </main>
+
+        <section id="portafolio">
+            <h2>Portafolio</h2>
+            <div class="cv-container">
+                <aside class="sidebar">
+                    <div class="item">
+                        <span class="nav-icon">🧑</span> Proyecto 1 | Bienes raices
+                    </div>
+                    <div class="item">
+                        <span class="nav-icon">📇</span> Proyecto 2 | 
+                    </div>
+                    <div class="item">
+                        <span class="nav-icon">⚡</span> Proyecto 3 | 
+                    </div>
+                </aside>
+                <div class="main-content">
+                    <div class="section">
+                        <span class="nav-icon">📋</span> Proyecto 4 | 
+                    </div>
+                    <div class="section">
+                        <span class="nav-icon">💼</span> Proyecto 5 | 
+                    </div>
+                    <div class="section">
+                        <span class="nav-icon">🎓</span> Proyecto 6 | 
+                    </div>
                 </div>
+            </div>
         </section>
 
-        <!-- SECCIÓN: Contacto (Formulario) -->
         <section id="contacto">
             <h2>Contacto</h2>
-
-            <!-- 
-                FORMULARIO HTML5 CON VALIDACIÓN NATIVA
-                Nota: Esto no envía emails aún (necesita backend), 
-                pero valida que los datos sean correctos
-            -->
             <form action="#" method="post">
-
-                <!-- Campo de Email con validación automática -->
                 <p>
                     <label for="email">Tu Email:</label><br>
                     <input 
@@ -310,8 +358,6 @@
                         required
                     >
                 </p>
-
-                <!-- Campo de Nombre (requerido) -->
                 <p>
                     <label for="nombre">Tu Nombre:</label><br>
                     <input 
@@ -323,8 +369,6 @@
                         minlength="2"
                     >
                 </p>
-
-                <!-- Campo de Mensaje -->
                 <p>
                     <label for="mensaje">Mensaje:</label><br>
                     <textarea 
@@ -337,13 +381,8 @@
                         minlength="10"
                     ></textarea>
                 </p>
-
-                <!-- Botón de envío -->
-                <button type="submit" >Enviar Mensaje</button>
-
+                <button type="submit">Enviar Mensaje</button>
             </form>
-
-            <!-- Información de contacto directo -->
             <p>
                 <strong>Email directo:</strong> jaburto@ucol.mx<br>
                 <strong>Teléfono:</strong> 3121909390
@@ -352,13 +391,8 @@
 
     </main>
 
-    <!-- ====================
-        FOOTER: Pie de página
-        ==================== -->
     <footer>
         <p>&copy; 2026 Joshua Adrian Aburto Beltran. CV creado con HTML5.</p>
-
-        <!-- OPCIONAL: Enlace a tu GitHub -->
         <p>
             <a href="https://github.com/Joshua18181" target="_blank">
                 Ver mi GitHub
