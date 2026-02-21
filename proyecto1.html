@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 1 | Bienes raices</title>
+    <style>
+        body{
+            background-color: #0d1117;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #A1A1AA;
+            line-height: 1.6;
+        }
+        header h1{
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 5px;
+            color: #38BDF8;
+            letter-spacing: 1px;
+        }
+        header p {
+            text-align: center;
+            color: #52525B;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        main{
+            max-width: 800px;
+            margin: 20px auto;
+            background: #18181B;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6);
+        }
+        section{
+            margin-bottom: 30px;
+            background: #0d1117;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #27272A;
+        }
+        h2{
+            color: #38BDF8;
+            font-size: 1.8em;
+            border-bottom: 1px solid #27272A;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+        /* línea de acento bajo el h2 */
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 48px;
+            height: 2px;
+            background: #38BDF8;
+            border-radius: 2px;
+        }
+        p{
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #A1A1AA;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid #38BDF8;
+            color: #A1A1AA;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            background: #18181B;
+            color: #A1A1AA;
+            border: 1px solid #27272A;
+            border-radius: 8px;          /* esquinas rectas, más profesional que 10% */
+            width: 150px;
+            padding: 10px 16px;
+            margin: 0 auto;
+
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
+            text-decoration: none;
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+        .item:hover {
+            background: #38BDF8;
+            color: #09090B;
+            border-color: transparent;
+            transform: translateY(-2px);           /* sube en lugar de moverse lateral */
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35),
+                        0 0 0 1px rgba(56, 189, 248, 0.2);  /* doble sombra: glow + ring */
+        }     
+        .item:active {
+            transform: translateY(0px);            /* baja al hacer click, sensación física */
+            box-shadow: 0 2px 8px rgba(56, 189, 248, 0.25);
+        }       
+        .item:hover .nav-icon {
+            filter: brightness(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienes Raices</h1>
+    </header>
+    <main>
+        <h2>Proximamente...</h2>
+        <h3>Tecnologias a implementar</h2>
+            <ul>
+                <li>MVC | Model View Controllers</li>
+                <li>Rest API's</li>
+                <li>ORM's</li>
+                <li>Autenticacion</li>
+                <li>Pug</li>
+            </ul>
+            <a href="index.html">
+                <div class="item">
+                    Regresar
+                </div>
+            </a>
+    </main>
+</body>
+</html>
